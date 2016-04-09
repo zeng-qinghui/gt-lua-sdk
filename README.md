@@ -75,15 +75,15 @@ end
         
 if session['gtserver'] then
     if gtsdk.success_validate(args['geetest_challenge'],args['geetest_validate'],args['geetest_seccode'], session['user_id']) then
-	ngx.say('YES')
+        ngx.say('YES')
     else
-	ngx.say('NO')
+        ngx.say('NO')
     end
 else
     if gtsdk.fail_validate(args['geetest_challenge'],args['geetest_validate'],args['geetest_seccode']) then
-	ngx.say('yes')
+        ngx.say('yes')
     else
-	ngx.say('no')
+        ngx.say('no')
     end
 end
 ```
